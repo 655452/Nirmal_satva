@@ -1,0 +1,15 @@
+{
+  "name": "nirmal_satva_web_app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayur bodhare",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  }
+}
