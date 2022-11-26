@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<h1>Products</h1>
+
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% Products.forEach(function(product){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= product.image %>">
+                <div class="caption">
+                    <h4><%= product.name %></h4>
+                </div>
+                <div>
+                    <h4><%= product.price %></h4>
+                </div>
+                <p>
+                    <a href="/<%=product._id%>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+        <%}); %>
+</div>

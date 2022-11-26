@@ -1,0 +1,7 @@
+<form action="/admin/<%= product._id %>?_method=PUT" method="POST">
+    <input type="text" name="product[name]" id="name" placeholder="name" value="<%= product.name %>"><br>
+    <input type="text" name="product[description]" id="description" placeholder="description" value="<%= product.description %>"><br>
+    <input type="text" name="product[image]" id="image" placeholder="image" value="<%= product.image %>"><br>
+    <input type="text" name="product[price]" id="price" placeholder="price" value="<%= product.price %>"><br>
+    <input type="submit" value="submit">
+</form>
