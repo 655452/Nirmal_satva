@@ -1,5 +1,57 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+           .show>img{
+            height: 50vh;
+            width: 100%;
+            object-fit: cover;
+            transition: 1s;
+            border-radius: 10px;
+        }
+        .show>img:hover{
+            transition: 1s;
+            
+            
+            height: 70vh;
+        }
+        .show{
+            border-radius: 10px;
+            padding: 10px;
+            transition: 1s;
+        }
+        .lowerWrap{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .lowerWrap>a,.lowerWrap>form>button{
+            /* width: 10vw; */
+            padding: 12px 48px;
+        }
+       
+        .display{
+            transition: 1s;
+            box-shadow: 0px 0px 2px 2px rgb(237, 223, 223);
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            transition: 0.8s;
+        }
+        .display:hover{
+            transition: 0.8s;
+            box-shadow: 0px 0px 8px 8px rgb(237, 223, 223);
+        }
+       
+    </style>
+</head>
+<body>
+    
 
 <div class="container">
     <div class="row">
@@ -11,8 +63,8 @@
                 <li class="list-group-item">Info 3</li>
             </div>
         </div>
-        <div class="col-md-9">
-            <div class="thumbnail">
+        <div class="col-md-9 display">
+            <div class="thumbnail show">
                 <img src="<%= Product.image %>" class="img-responsive">
                 <div class="caption-full">
                     <h4 class="pull-right">$ <%= Product.price %></h4>
@@ -25,14 +77,18 @@
                     <p>
                         <em>Submitted By<%= Product.author.username%></em>
                     </p>
-                        <a class="btn btn-warning" href="/admin/<%= Product._id %>/edit">Edit</a>
+                        <div class="lowerWrap">
+                            <a class="btn btn-warning" href="/admin/<%= Product._id %>/edit">Edit</a>
                         <form id="delete-button" action="<%= Product._id %>?_method=DELETE"
-                            method="post">
-                            <button class="btn btn-danger">Delete</button>
+                            method="post" >
+                            <button class="btn btn-danger ">Delete</button>
                         </form>
+                        </div>
                 </div>
             </div>
             
         </div>
     </div>
 </div>
+</body>
+</html>
