@@ -13,14 +13,17 @@ var express = require("express"),
   (Comment = require("./models/comments"));
 
 // requiring routes
+app.use(express.static(__dirname + '/public'));
+
 var adminRoutes = require("./routes/admin");
 var userRoutes = require("./routes/user");
 var commentsRoutes = require("./routes/comments");
 
-mongoose.connect("mongodb://localhost:27017");
+mongoose.connect("mongodb://localhost:27017/")
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+
 app.use(methodOverride("_method"));
 
 app.use(
@@ -55,7 +58,7 @@ app.use("/", userRoutes);
 app.use("/admin", adminRoutes);
 app.use("/product/:id/comments", commentsRoutes);
 
-var port = 2000;
+var port = 7000;
 app.listen(port, function () {
   console.log("Server Started at " + port);
 });
