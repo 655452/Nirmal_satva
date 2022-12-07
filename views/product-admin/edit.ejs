@@ -13,7 +13,8 @@
 </head>
 <body>
     <div >
-        
+        <%- include('../partials/header'); %>
+        <!-- navabr -->
           
 
              <form class="editform" action="/admin/<%= product._id %>?_method=PUT" method="POST">
@@ -35,6 +36,7 @@
 </form>
           
     </div>
-    
+    <!-- footer -->
+    <%- include('../partials/footer'); %>
 </body>
 </html>

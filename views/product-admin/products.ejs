@@ -15,11 +15,12 @@
 
 <body>
 
-
+    <%- include('../partials/header'); %>
+    <!-- navabr -->
 
     <h1 style="text-align:center;">Products</h1>
 
-    <div class="wrap">
+    <div class="productwrap">
         <% Products.forEach(function(product){ %>
         <div class="cards">
             <img src="<%= product.image %>">
@@ -50,6 +51,8 @@
 
     </div>
 
+    <!-- footer -->
+    <%- include('../partials/footer'); %>
 </body>
 
 </html>

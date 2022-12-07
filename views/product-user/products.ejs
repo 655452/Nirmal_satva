@@ -12,38 +12,86 @@
   
 </head>
 
-<body>
+<body >
 
+    <%- include('../partials/header'); %>
 
-
-    <h1 style="text-align:center;">Products</h1>
-
-    <div class="productwrap">
+    <div class="Navwrap" style="margin:10vh auto;height:auto;background-color: rgb(222, 221, 221);width: 98%;   background-image: none;" >
         
         
+       
+        <div class="info" style=" background-color: rgb(222, 221, 221); color:rgb(92, 88, 88);width: 100%; padding:10vh 20px;" >
+            
+            
+            <div style="width: 70%;">
+                <h1  style="font-size:70px; text-align: center;">Welcome Nirmala Sitaraman</h1>
+            <h3 style="text-align: center;font">Herbalife Nutrition has a wide range of products that are manufactured to support your nutrition goals, no matter how complex they seem. Whether it’s maintaining an ideal and healthy weight or striving to improve your strength and performance, we are your one stop shop for support and guidance.
+
+                 </h3>
+            </div>
+        </div>
+
+    </div>
+    
+   
+    <h1 style="text-align: center; margin-top: 25px;">Products</h1>
+
+    <div class="productwrap"  style="margin:7vh 0px">
         
-        
-        <% Products.forEach(function(product){ %>
-        <div class="cards" style="margin-top:7vh" >
-            <img src="<%= product.image %>">
-             <div class="caption">
-                    <h4><%= product.name %></h4>
+
+        <div class="cards">
+            <img src="./css/images/bag1.jpg">
+             <div class="cardContent" >
+                <div class="caption"  >
+                    <h4>Product name</h4>
                 </div>
-                <div>
-                    <h4><%= product.price %></h4>
+                <div >
+                    <h4>jnsjnjn</h4>
                 </div>
-            <div class="cardbtn">
-                <a style="text-decoration: none; font-size:larger;"  class="submit" >Submit</a>
-                <a style="text-decoration: none; font-size:larger;"   href="/admin/<%=product._id%>" class="btn btn-primary">More Info</a>
+            <div class="cardbtn" >
+                
+                <a href=""  style="text-decoration: none; font-size:larger;"class="btn btn-primary">More Info</a>
                 
             </div>
+             </div>
+             
+            
 
         </div>
+
+<!-- <% Products.forEach(function(product){ %>
+          
+        <div class="cards">
+            <img src="<%= product.image %>">
+             <div class="cardContent" >
+                <div class="caption"  >
+                    <h4><%= product.name %></h4>
+                </div>
+                <div >
+                    <h4><%= product.price %></h4>
+                </div>
+            <div class="cardbtn" >
+                
+                <a href="/<%=product._id%>"  style="text-decoration: none; font-size:larger;"class="btn btn-primary">More Info</a>
+                
+            </div>
+             </div>
+             
+            
+
+        </div>
+        <%}); %> -->
+
+        
+
+
+   
+
+
        
-        <%}); %>
-
-
-
+       
+      
+        <%- include('../partials/footer'); %>
 
     </div>
 
