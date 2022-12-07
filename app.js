@@ -1,4 +1,6 @@
 const passport = require("passport");
+const path=require("path");
+const ejs=require("ejs")
 
 var express = require("express"),
   app = express(),
@@ -15,14 +17,22 @@ var express = require("express"),
 // requiring routes
 app.use(express.static(__dirname + '/public'));
 
+
+
 var adminRoutes = require("./routes/admin");
 var userRoutes = require("./routes/user");
 var commentsRoutes = require("./routes/comments");
+
 
 mongoose.connect("mongodb://localhost:27017/")
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+
+
+app.set('views',path.join(__dirname,"./views") );
+
+
 
 app.use(methodOverride("_method"));
 
