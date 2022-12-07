@@ -1,6 +1,6 @@
 .Navwrap{
     width: auto;
-    height: 90vh;
+    height: 9vh;
     background-image: url("./images/bag9.jpg");
     background-size: cover;
     background-position: center;
@@ -48,6 +48,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    
 }
 .info>h1{
     
@@ -64,6 +65,14 @@
 }
 
 @media only screen and (max-width: 936px) {
+    .info{
+        width: 100%;
+    }
+    .Navwrap{
+        height: auto;
+        
+        background-color: black;
+    }
 #menu{
 display:block;
 text-align: start;
@@ -274,32 +283,41 @@ footer.nb-footer .copyright p {
             }
     
             .cards {
-                width: 20vw;
+                width: 50%;
                 height: auto;
                 
                 border-radius: 12px;
                 box-shadow: 0px 0px 10px 10px rgb(243, 234, 234);
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
-                flex-direction: column;
-                margin: 10px 25px;
+                /* flex-direction: column; */
+                margin: 5vh 25px;
                 padding: 15px;
                 transition: 1s;
             }
+            .cardContent{
+                /* border: 2px solid red; */
+                margin: 0px auto;
+                display:flex;
+                flex-direction:column; 
+                justify-content: center;
+                align-items: center;
+            }
     
             .cards>img {
-                width: 100%;
+                width: 40%;
                 border-radius: 6px;
-                height: 30vh;
+                height: 40vh;
                 object-fit: cover;
                 transition: 1s;
-                object-position: top;
+                /* object-position: top; */
                 /* margin: 10px 0px; */
     
             }
             .cards>img:hover{
                 transition: 1s;
+                
                 object-position: center;
                 
             }
@@ -314,12 +332,14 @@ footer.nb-footer .copyright p {
                 width: 100%;
                 display: flex;
                 font-weight: bold;
+                margin-top: 20px;
                 justify-content: space-evenly;
             }
             .cardbtn>a,.cardbtn>p>a{
                 padding: 12px 24px;
                 transition: 0.8s;
                 border-radius: 10px;
+                margin: 0px 20px;
                 
             }
             .cardbtn>.submit:hover{
@@ -333,8 +353,12 @@ footer.nb-footer .copyright p {
             @media only screen and (max-width: 913px) {
                 .cards {
                     width: 70%;
+                    flex-direction: column;
                 }
-    
+                .cards>img{
+                    object-fit: cover;
+                    width: 100%;
+                }
                
             }
             /* comments */
@@ -532,3 +556,45 @@ footer.nb-footer .copyright p {
                 background-color: rgb(111, 19, 187);
                 border-radius: 20px 20px 0px 0px;
             }
+
+            /* billing */
+
+           
+            .billcar{
+                width: 40%;
+                
+            }
+            .billcar>input{
+                font-size:22px; 
+                height: 7vh;
+                width: 98%;
+            }
+            .billcar>label{
+                font-weight: 100;
+            }
+            .billingPrice{
+              width: 40%;
+            }
+           
+            .flex{
+                width: 85%;
+
+            }
+            @media only screen and (max-width: 836px){
+                .billcar{
+                    width: 80%;
+
+                }
+                #priceSpace{
+                  margin-left: 20px;
+                }
+                .billingPrice{
+                  width: 85%;
+                }
+                .flex{
+                width: 100%;
+
+            }
+            }
+            
+       
